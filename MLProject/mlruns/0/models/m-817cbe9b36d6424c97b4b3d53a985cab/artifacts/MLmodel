@@ -1,0 +1,23 @@
+artifact_path: file:D:/cella/Cellaa/pijak/SMSML_Marcella-Fitri-Handayani/Workflow-CI/MLProject/mlruns/0/models/m-817cbe9b36d6424c97b4b3d53a985cab/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-817cbe9b36d6424c97b4b3d53a985cab
+model_size_bytes: 4117241
+model_uuid: m-817cbe9b36d6424c97b4b3d53a985cab
+prompts: null
+run_id: e56a2926fa8a48c6af61c05816378ccb
+utc_time_created: '2026-06-05 10:23:21.293221'

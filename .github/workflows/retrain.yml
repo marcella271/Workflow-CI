@@ -1,0 +1,29 @@
+name: Retrain Fraud Model
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+        working-directory: MLProject
+
+      - name: Run MLflow Project
+        run: |
+          mlflow run . --entry-point main --env-manager local
+        working-directory: MLProject
